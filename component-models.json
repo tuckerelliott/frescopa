@@ -4923,6 +4923,18 @@
     ]
   },
   {
+    "id": "quiz",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "quizpath",
+        "value": "",
+        "label": "Quiz Content Fragment path",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "reward-sticky",
     "fields": [
       {
