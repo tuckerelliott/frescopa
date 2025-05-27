@@ -3,7 +3,7 @@ function getAEMPublish() {
 }
 
 function getAEMAuthor() {
-  return 'https://author-p149891-e1546481.adobeaemcloud.com';
+  return 'https://author-p130360-e1272151.adobeaemcloud.com';
 }
 
 export { getAEMPublish, getAEMAuthor };
