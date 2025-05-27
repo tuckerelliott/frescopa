@@ -58,22 +58,6 @@ const pluginContext = {
 };
 
 /**
- * Builds hero block and prepends to main in a new section.
- * @param {Element} main The container element
- */
-/* eslint-disable no-unused-vars */
-function buildHeroBlock(main) {
-  const h1 = main.querySelector('h1');
-  const picture = main.querySelector('picture');
-  // eslint-disable-next-line no-bitwise
-  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
-    const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
-    main.prepend(section);
-  }
-}
-
-/**
  * Moves all the attributes from a given element to another given element.
  * @param {Element} from the element to copy attributes from
  * @param {Element} to the element to copy attributes to
@@ -173,6 +157,21 @@ async function applyTemplates(doc) {
   if (doc.body.classList.contains('columns')) {
     buildTemplateColumns(doc);
   }
+}
+
+/**
+ * Notifies dropins about the current loading state.
+ * @param {string} state The loading state to notify
+ */
+function notifyUI(event) {
+  // skip if the event was already sent
+  if (events.lastPayload(`aem/${event}`) === event) return;
+  // notify dropins about the current loading state
+  const handleEmit = () => events.emit(`aem/${event}`);
+  // listen for prerender event
+  document.addEventListener('prerenderingchange', handleEmit, { once: true });
+  // emit the event immediately
+  handleEmit();
 }
 
 /**

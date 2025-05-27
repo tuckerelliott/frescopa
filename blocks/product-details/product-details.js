@@ -24,7 +24,6 @@ import ProductGallery from '@dropins/storefront-pdp/containers/ProductGallery.js
 import { fetchPlaceholders, setJsonLd } from '../../scripts/commerce.js';
 
 // Initializers
-import { IMAGES_SIZES } from '../../scripts/initializers/pdp.js';
 import '../../scripts/initializers/cart.js';
 import { rootLink } from '../../scripts/scripts.js';
 
