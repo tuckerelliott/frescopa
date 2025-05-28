@@ -464,7 +464,6 @@ main .section.product-list-page-custom-container > .default-content-wrapper h1:f
 .product-list-page-custom .products .list > ol > li .picture {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1.2;
   position: relative;
   overflow: hidden;
 }
