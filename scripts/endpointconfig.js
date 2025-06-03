@@ -1,9 +1,11 @@
+import { getConfigValue } from "./configs";
+
 function getAEMPublish() {
-  return 'https://publish-p153710-e1614629.adobeaemcloud.com';
+  return getConfigValue('aem.publish');
 }
 
 function getAEMAuthor() {
-  return 'https://author-p153710-e1614629.adobeaemcloud.com';
+  return getConfigValue('aem.author');
 }
 
 export { getAEMPublish, getAEMAuthor };
