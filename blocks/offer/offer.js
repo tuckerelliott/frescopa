@@ -6,7 +6,7 @@ export default async function decorate(block) {
   const aemauthorurl = getAEMAuthor();
   const persistedquery = '/graphql/execute.json/hastygorilla69694/OfferByPath';
   const offerpath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
-  let variationname = block.querySelector(':scope div:nth-child(2) > div').innerHTML.trim();
+  let variationname = block.querySelector(':scope div:nth-child(2) > div > p').innerHTML.trim();
   if (!variationname) {
     variationname = 'main';
   }
