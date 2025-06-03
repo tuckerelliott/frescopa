@@ -1,0 +1,321 @@
+.quiz-inner-container {
+  max-width: 70%;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz-inner-container h2 {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  color: #7a4a2f;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.quiz-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.quiz-options button {
+  background: none;
+  border: 2px solid #e6c7b2;
+  border-radius: 14px;
+  padding: 24px 32px;
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  color: #7a4a2f;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+  min-width: 180px;
+  min-height: 80px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.quiz-options button:hover,
+.quiz-options button:focus {
+  border: 2px solid #e87c3a;
+  background: #fff0e6;
+  box-shadow: 0 4px 16px rgba(232,124,58,0.08);
+}
+
+.quiz-progress {
+  margin-top: 12px;
+  color: #b88b5a;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+}
+
+.quiz-result {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #e05633;
+  border-radius: 18px;
+  color: #fff;
+  padding: 48px 32px 40px 32px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.quiz-result h2 {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  font-family: 'Georgia', serif;
+}
+
+.quiz-result h1 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  font-family: 'Georgia', serif;
+  font-weight: 700;
+}
+
+.quiz-result p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 700px) {
+  .quiz-inner-container, .quiz-result {
+    max-width: 98vw;
+    padding: 18px 4vw 18px 4vw;
+  }
+  .quiz-options button {
+    min-width: 120px;
+    padding: 16px 8px;
+    font-size: 1rem;
+  }
+}
+
+.quiz-slider-row {
+  width: 90%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 24px 18px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quiz-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.quiz-slider-label {
+  color: #7a4a2f;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.quiz-slider-label.right {
+  text-align: right;
+}
+
+.quiz-slider {
+  width: 100%;
+  accent-color: #f4a32c;
+  height: 8px;
+  border-radius: 8px;
+  background: #e0e0e0;
+  outline: none;
+}
+
+.quiz-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f4a32c;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(244,163,44,0.15);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.quiz-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 8px;
+  background: #e0e0e0;
+}
+.quiz-slider:focus::-webkit-slider-thumb {
+  outline: 2px solid #f4a32c;
+}
+
+.quiz-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f4a32c;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(244,163,44,0.15);
+  cursor: pointer;
+}
+.quiz-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 8px;
+  background: #e0e0e0;
+}
+
+.quiz-slider::-ms-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f4a32c;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(244,163,44,0.15);
+  cursor: pointer;
+}
+.quiz-slider::-ms-fill-lower,
+.quiz-slider::-ms-fill-upper {
+  background: #e0e0e0;
+  border-radius: 8px;
+}
+.quiz-slider:focus {
+  outline: none;
+}
+
+.profile-heading {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.profile-title {
+  font-family: 'Georgia', serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.profile-subtitle {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 18px;
+  text-align: center;
+  font-style: italic;
+}
+
+.profile-description {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.login-form-container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  color: #1e3a4c;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-bottom: 22px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-label {
+  font-size: 1rem;
+  color: #1e3a4c;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e0e0e0;
+  background: #fafbfc;
+  font-size: 1rem;
+  color: #1e3a4c;
+  margin-bottom: 2px;
+  box-shadow: 0 1px 2px rgba(30,58,76,0.04);
+  transition: border 0.2s;
+}
+.login-input:focus {
+  border: 1.5px solid #e05633;
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px 0;
+  background: #1e3a4c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(30,58,76,0.08);
+  transition: background 0.2s;
+}
+
+.login-forgot {
+  display: block;
+  margin: 14px auto 0 auto;
+  color: #1e3a4c;
+  font-size: 0.98rem;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.login-bottom-text {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.98rem;
+  color: #4a4a4a;
+}
+
+.login-create {
+  color: #e05633;
+  text-decoration: underline;
+  margin-left: 4px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.login-create:hover, .login-create:focus {
+  color: #1e3a4c;
+}
