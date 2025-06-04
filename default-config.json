@@ -1,6 +1,10 @@
 {
   "public": {
     "default": {
+      "aem" : {
+        "author": "https://author-p130360-e1272151.adobeaemcloud.com",
+        "publish": "https://publish-p130360-e1272151.adobeaemcloud.com"
+      },
       "commerce-core-endpoint": "https://www.aemshop.net/graphql",
       "commerce-endpoint": "https://catalog-service-sandbox.adobe.io/graphql",
       "headers": {
