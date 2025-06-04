@@ -1,4 +1,4 @@
-import { getConfigValue } from "./configs";
+import { getConfigValue } from "./configs.js";
 
 function getAEMPublish() {
   return getConfigValue('public.aem.publish');
