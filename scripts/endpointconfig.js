@@ -1,11 +1,11 @@
 import { getConfigValue } from "./configs.js";
 
 function getAEMPublish() {
-  return getConfigValue('public.aem.publish');
+  return getConfigValue('aem.publish');
 }
 
 function getAEMAuthor() {
-  return getConfigValue('public.aem.author');
+  return getConfigValue('aem.author');
 }
 
 export { getAEMPublish, getAEMAuthor };
