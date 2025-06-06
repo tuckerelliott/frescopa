@@ -281,7 +281,7 @@ async function loadEager(doc) {
 
     if (category && urlpath) {
       // eslint-disable-next-line import/no-unresolved, import/no-absolute-path
-      const { preloadCategory } = await import('/blocks/product-list-page-custom/product-list-page-custom.js');
+      const { preloadCategory } = await import('../blocks/product-list-page-custom/product-list-page-custom.js');
       preloadCategory({ id: category, urlPath: urlpath });
     }
   } else if (document.body.querySelector('main .commerce-cart')) {
