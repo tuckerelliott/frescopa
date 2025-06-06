@@ -80,12 +80,3 @@ footer .columns-wrapper .columns div {
     gap: 80px;
   }
 }
-
-.footer-wrapper {
-  background-color: var(--frescopa-color-background);
-  display: flex;
-}
-
-.footer-icon {
-  color: var(--frescopa-color-text)
-}
