@@ -466,7 +466,6 @@ class ProductListPage extends Component {
   };
 
   async componentDidMount() {
-    
     await this.loadProducts();
 
     // Special optimization for mobile
