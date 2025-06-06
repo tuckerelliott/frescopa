@@ -1,4 +1,4 @@
-/* eslint-disable object-curly-spacing, class-methods-use-this */
+/* eslint-disable object-curly-spacing, class-methods-use-this, import/no-cycle */
 import {
   h, Component, Fragment,
 } from '@dropins/tools/preact.js';

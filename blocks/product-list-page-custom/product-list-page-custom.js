@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import {
   h, Component, Fragment, render, createRef,
 } from '@dropins/tools/preact.js';
