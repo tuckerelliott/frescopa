@@ -146,14 +146,13 @@
   --background-color: var(--color-neutral-50);
   --nav-height: 70px;
   --site-width: 1360px;
-
-  --frescopa--color-background: #F4E9DC;
-  --frescopa--color-brand: #A33532;
-  --frescopa--color-primary: #00647D;
-  --frescopa--color-secondary: #DC6E52;
-  --frescopa--color-tertiary: #EBA439;
-  --frescopa--color-text: #58181D;
-  --frescopa--color-black: #2C2C2C;
+  --frescopa-color-background: #F4E9DC;
+  --frescopa-color-brand: #A33532;
+  --frescopa-color-primary: #00647D;
+  --frescopa-color-secondary: #DC6E52;
+  --frescopa-color-tertiary: #EBA439;
+  --frescopa-color-text: #58181D;
+  --frescopa-color-black: #2C2C2C;
 }
 
 /* fallback fonts */
@@ -249,19 +248,19 @@ h2 {
 }
 
 h3 {
-  font: normal normal normal 36px/42px Baskerville;
+  font: normal normal normal 36px/42px Baskerville, serif;
   letter-spacing: var(--type-display-3-letter-spacing);
 }
 
 h4 {
-  font: normal normal normal 32px/32px Baskerville;
-  letter-spacing: 0px;
+  font: normal normal normal 32px/32px Baskerville, serif;
+  letter-spacing: 0;
   margin-bottom: 10px;
 }
 
 h5 {
-  font: normal normal normal 24px/30px Baskerville;
-  letter-spacing: 0px
+  font: normal normal normal 24px/30px Baskerville, serif;
+  letter-spacing: 0
 }
 
 h6 {
@@ -270,8 +269,8 @@ h6 {
 }
 
 p {
-  font: normal normal normal 18px/24px Roboto;
-  letter-spacing: 0px;
+  font: normal normal normal 18px/24px Roboto, sans-serif;
+  letter-spacing: 0;
 }
 
 p,
@@ -323,7 +322,7 @@ button {
 
 /* links */
 a:not(.dropin-design a) {
-  color: var(--frescopa--color-text);
+  color: var(--frescopa-color-text);
   letter-spacing: var(--type-body-1-strong-letter-spacing);
   text-decoration: underline solid transparent;
   text-decoration-thickness: 2px;
@@ -332,7 +331,7 @@ a:not(.dropin-design a) {
 }
 
 a:not(.dropin-design a):hover {
-  text-decoration: underline solid Currentcolor;
+  text-decoration: underline solid currentcolor;
 }
 
 /* buttons */
@@ -527,23 +526,23 @@ main[hidden] {
 
 
 .frescopa-background-red {
-  background-color: var(--frescopa--color-brand);
+  background-color: var(--frescopa-color-brand);
 }
 
 .frescopa-background-yellow {
-  background-color: var(--frescopa--color-tertiary);
+  background-color: var(--frescopa-color-tertiary);
 }
 
 .frescopa-background-blue {
-  background-color: var(--frescopa--color-primary);
+  background-color: var(--frescopa-color-primary);
 }
 
 .frescopa-background-beige {
-  background-color: var(--frescopa--color-background);
+  background-color: var(--frescopa-color-background);
 }
 
 .frescopa-background-black {
-  background-color: var(--frescopa--color-black);
+  background-color: var(--frescopa-color-black);
 }
 
 main > .section + .numbered {
@@ -555,12 +554,11 @@ main > .section + .card-tiles > div {
 }
 
 main > .section + .background {
-  background-color: var(--frescopa--color-background);
   max-width: 1360px;
-  padding: 10px 0px;
+  padding: 10px 0;
   margin-left: auto;
   margin-right: auto;
-  background: url('../../styles/backgrounds/big.svg') no-repeat center center/cover;
+  background: var(--frescopa-color-background) url('../../styles/backgrounds/big.svg') no-repeat center center/cover;
 }
 
 main > .section + .background > div {
@@ -574,6 +572,7 @@ main > .section + .background > div {
     padding: 50px 0 2px;
   }
 }
+
 /* Section layout variations */
 .section.columns {
   display: flex;
