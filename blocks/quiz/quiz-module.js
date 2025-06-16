@@ -144,10 +144,10 @@ export default function Quiz({ questions = [] }) {
         key: idx,
         onClick: () => handleAnswer(),
       },
-      opt.image && opt.image._publishUrl
+      opt.image && opt.image._dmS7Url
       && h('div', { className: 'quiz-option-img-wrapper' },
         h('img', {
-          src: opt.image._publishUrl,
+          src: opt.image._dmS7Url + (opt.image._dmS7Url.includes('?') ? '&' : '?') + 'wid=520',
           alt: opt.description || '',
         })
       ),
