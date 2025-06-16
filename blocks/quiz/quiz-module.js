@@ -143,31 +143,15 @@ export default function Quiz({ questions = [] }) {
       ...currentQuestion.options.map((opt, idx) => h('button', {
         key: idx,
         onClick: () => handleAnswer(),
-        style: {
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          flex: '1 0 30%',
-          marginLeft: '20px',
-          marginRight: '20px',
-          maxWidth: '40%',
-          paddingTop: '50px',
-          paddingBottom: '50px',
-        },
       },
       opt.image && opt.image._publishUrl
-            && h('img', {
-              src: opt.image._publishUrl,
-              alt: opt.description || '',
-              style: {
-                objectFit: opt.imageType === 'cover' ? 'cover' : '',
-                borderRadius: 10,
-                marginBottom: 12,
-                margin: opt.imageType === 'icon' ? 'auto' : '',
-                maxHeight: opt.imageType === 'icon' ? '100px' : '',
-              },
-            }),
-      h('span', null, opt.description),
+      && h('div', { className: 'quiz-option-img-wrapper' },
+        h('img', {
+          src: opt.image._publishUrl,
+          alt: opt.description || '',
+        })
+      ),
+      h('span', { className: 'quiz-option-description' }, opt.description),
       ),
       ),
     ),
