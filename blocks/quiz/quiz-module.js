@@ -31,14 +31,14 @@ export default function Quiz({ questions = [] }) {
 
   // Render result view
   if (step === totalSteps) {
-    return h('div', { className: 'quiz-result' },
+    return h('div', { className: 'quiz-results' },
       h('h2', { className: 'profile-heading' }, 'Your coffee profile:'),
+      h('div', { className: 'quiz-result' },
       h('h1', { className: 'profile-title' }, 'Classic Contemporary'),
       h('div', { className: 'profile-subtitle' }, 'What does it mean?'),
-      h('p', { className: 'profile-description' }, 'to get your full MyBarista coffee quiz results and add recommendations to your profile!'),
+      h('h2', { className: 'login-title' }, 'Sign in or create an account'),
+      h('p', { className: 'login-subtitle' }, 'to get your full MyBarista coffee quiz results and add recommendations to your profile!'),
       h('div', { className: 'login-form-container' },
-        h('h2', { className: 'login-title' }, 'Sign in or create an account'),
-        h('p', { className: 'login-subtitle' }, 'to get your full MyBarista coffee quiz results and add recommendations to your profile!'),
         h('form', {
           className: 'login-form',
           onSubmit: handleLogin,
@@ -78,6 +78,7 @@ export default function Quiz({ questions = [] }) {
           h('a', { href: '#', className: 'login-create' }, 'Create one today'),
         ),
       ),
+      ),
     );
   }
 
@@ -92,7 +93,7 @@ export default function Quiz({ questions = [] }) {
       newValues[idx] = value;
       setSliderValues(newValues);
     };
-    return h('div', { className: 'quiz-inner-container' },
+    return h('div', { className: `quiz-inner-container step-${step}` },
       h('h2', null, currentQuestion.question),
       h('form', {
         className: 'quiz-options',
@@ -137,7 +138,7 @@ export default function Quiz({ questions = [] }) {
   }
 
   // Regular question (image or text options)
-  return h('div', { className: 'quiz-inner-container' },
+  return h('div', { className: `quiz-inner-container step-${step}` },
     h('h2', null, currentQuestion.question),
     h('div', { className: 'quiz-options' },
       ...currentQuestion.options.map((opt, idx) => h('button', {

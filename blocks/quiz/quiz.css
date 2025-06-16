@@ -105,31 +105,35 @@
 }
 
 .quiz-result {
-  max-width: 600px;
-  margin: 40px auto;
+  max-width: 100%;
+  margin: 16px auto;
   background: #e05633;
   border-radius: 18px;
   color: #fff;
+  font-size: 1.8rem;
   padding: 48px 32px 40px 32px;
   text-align: center;
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 
-.quiz-result h2 {
-  font-size: 1.3rem;
-  margin-bottom: 18px;
-  font-family: 'Georgia', serif;
+.quiz-result h1 {
+  font-size: 5.6rem;
+  margin-bottom: 16px;
+  font-family: 'Baskerville', serif;
+  font-weight: 400;
 }
 
-.quiz-result h1 {
-  font-size: 2.2rem;
-  margin-bottom: 16px;
-  font-family: 'Georgia', serif;
-  font-weight: 700;
+.quiz-result h2 {
+  font-size: 3.6rem;
+  color: #fff;
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-family: 'Baskerville', serif;
 }
 
 .quiz-result p {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
+  margin-top: 0;
   margin-bottom: 24px;
 }
 
@@ -238,15 +242,16 @@
 }
 
 .profile-heading {
-  font-family: 'Georgia', serif;
-  font-size: 1.5rem;
-  color: #fff;
-  margin-bottom: 12px;
+  font-family: 'Baskerville', serif;
+  font-size: 3.6rem;
+  color: #58181D;
+  margin-top: 58px;
+  margin-bottom: 0px;
   text-align: center;
 }
 
 .profile-title {
-  font-family: 'Georgia', serif;
+  font-family: 'Baskerville', serif;
   font-size: 2.2rem;
   color: #fff;
   margin-bottom: 8px;
@@ -254,7 +259,6 @@
 }
 
 .profile-subtitle {
-  font-size: 1.1rem;
   color: #fff;
   margin-bottom: 18px;
   text-align: center;
@@ -262,14 +266,13 @@
 }
 
 .profile-description {
-  font-size: 1rem;
   color: #fff;
   margin-bottom: 32px;
   text-align: center;
 }
 
 .login-form-container {
-  max-width: 420px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 40px 32px 32px 32px;
   display: flex;
@@ -277,17 +280,9 @@
   align-items: center;
 }
 
-.login-title {
-  font-family: 'Georgia', serif;
-  font-size: 1.4rem;
-  color: #1e3a4c;
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.login-subtitle {
-  font-size: 1rem;
-  color: #4a4a4a;
+.login-subtitle p {
+  font-size: 1.8rem;
+  color: #fff;
   margin-bottom: 22px;
   text-align: center;
   line-height: 1.5;
@@ -297,27 +292,29 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+
 }
 
 .login-label {
-  font-size: 1rem;
-  color: #1e3a4c;
-  margin-bottom: 4px;
+  font-size: 1.6rem;
+  color: #58181D;
+  margin-bottom: 7px;
   font-weight: 500;
+  text-align: left;
 }
 
 .login-input {
   width: 100%;
   padding: 12px 14px;
-  border-radius: 10px;
-  border: 1.5px solid #e0e0e0;
+  border-radius: 50px;
+  border: 2px solid #EBA439;
   background: #fafbfc;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #1e3a4c;
   margin-bottom: 2px;
   box-shadow: 0 1px 2px rgba(30,58,76,0.04);
   transition: border 0.2s;
+  margin-bottom: 30px;
 }
 .login-input:focus {
   border: 1.5px solid #e05633;
@@ -325,12 +322,12 @@
 }
 
 .login-btn {
-  width: 100%;
+  width: 110px;
   padding: 14px 0;
-  background: #1e3a4c;
+  background: #00647D;
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 100px;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -342,23 +339,28 @@
 .login-forgot {
   display: block;
   margin: 14px auto 0 auto;
-  color: #1e3a4c;
-  font-size: 0.98rem;
+  color: #fff;
+  font-size: 1.4rem;
   text-align: center;
   text-decoration: underline;
   cursor: pointer;
   transition: color 0.2s;
 }
 
+.login-form .login-forgot {
+  color: #fff;
+  text-decoration: none;
+}
+
 .login-bottom-text {
   margin-top: 18px;
   text-align: center;
-  font-size: 0.98rem;
-  color: #4a4a4a;
+  font-size: 1.6rem;
+  color: #58181D;
 }
 
 .login-create {
-  color: #e05633;
+  color: #A33532;
   text-decoration: underline;
   margin-left: 4px;
   font-weight: 500;
@@ -366,4 +368,26 @@
 }
 .login-create:hover, .login-create:focus {
   color: #1e3a4c;
+}
+
+
+.step-0{
+  view-transition-name: step-0;
+}
+
+.step-1{
+  view-transition-name: step-1;
+}
+.step-2{
+  view-transition-name: step-2;
+}
+.step-3{
+  view-transition-name: step-3;
+}
+.step-4{
+  view-transition-name: step-4;
+}
+
+::view-transition-group(*) {
+  animation-duration: 5s;
 }
