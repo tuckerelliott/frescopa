@@ -12,6 +12,14 @@
  * governing permissions and limitations under the License.
  */
 
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(root) {
+  animation-duration: 0.5s;
+}
+
 /* stylelint-disable no-empty-source */
 :root, .dropin-design {
   /* Adobe Commerce Dropin design tokens */
