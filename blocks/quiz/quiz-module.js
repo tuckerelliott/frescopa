@@ -143,6 +143,7 @@ export default function Quiz({ questions = [] }) {
     h('div', { className: 'quiz-options' },
       ...currentQuestion.options.map((opt, idx) => h('button', {
         key: idx,
+        'data-aue-resource': 'urn:aemconnection:' + opt._path + '/jcr:content/data/master',
         onClick: () => handleAnswer(),
       },
       opt.image && opt.image._dmS7Url
