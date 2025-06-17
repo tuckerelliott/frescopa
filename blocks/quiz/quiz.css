@@ -43,6 +43,11 @@
   max-width: 520px;
   margin-bottom: 30px;
   position: relative;
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
 }
 
 .quiz-option-img-wrapper-cover {
@@ -352,7 +357,6 @@
 }
 
 .login-input {
-  width: 100%;
   padding: 12px 14px;
   border-radius: 50px;
   border: 2px solid #EBA439;
@@ -434,4 +438,13 @@
 }
 .step-4{
   view-transition-name: step-4;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

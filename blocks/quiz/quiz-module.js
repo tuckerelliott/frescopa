@@ -11,10 +11,12 @@ export default function Quiz({ questions = [] }) {
   const [step, setStep] = useState(0); // 0..questions.length: questions, then result
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [answers, setAnswers] = useState([]);
   const totalSteps = questions.length;
 
   // Handle answer selection
-  const handleAnswer = () => {
+  const handleAnswer = (option, idx, step) => {
+    setAnswers(prev => [...prev, { option, idx, step }]);
     setStep((prev) => prev + 1);
   };
 
@@ -31,10 +33,21 @@ export default function Quiz({ questions = [] }) {
 
   // Render result view
   if (step === totalSteps) {
+    console.log('All answers:', answers);
+
+    console.log(answers[0].idx);
+
+    let coffeeProfile = { title: '', segment: '' };
+    if (answers[0].idx === 0) {
+      coffeeProfile.title = 'Sandy Sipper'
+    } else {
+      coffeeProfile.title = 'Coffee Explorer';
+    }
+
     return h('div', { className: 'quiz-results' },
       h('h2', { className: 'profile-heading' }, 'Your coffee profile:'),
       h('div', { className: 'quiz-result' },
-        h('h1', { className: 'profile-title' }, 'Classic Contemporary'),
+        h('h1', { className: 'profile-title' }, coffeeProfile.title),
         h('div', { className: 'profile-subtitle' }, 'What does it mean?'),
         h('h2', { className: 'login-title' }, 'Sign in or create an account'),
         h('p', { className: 'login-subtitle' }, 'to get your full MyBarista coffee quiz results and add recommendations to your profile!'),
@@ -65,7 +78,7 @@ export default function Quiz({ questions = [] }) {
           }),
           h('button', {
             type: 'submit',
-            className: 'login-btn',
+            className: 'button primary',
           }, 'Sign in'),
           h('a', {
             href: '#',
@@ -77,9 +90,16 @@ export default function Quiz({ questions = [] }) {
             "Don't have a Fréscopa account yet? ",
             h('a', { href: '#', className: 'login-create' }, 'Create one today'),
           ),
-        ),
-      ),
-    );
+          h('button', {
+            className: 'button secondary',
+            onClick: () => {
+              setStep(0);
+              setAnswers([]);
+            }
+          }, 'Restart Quiz'),
+              ),
+            ),
+          );
   }
 
   // Render current question
@@ -144,7 +164,7 @@ export default function Quiz({ questions = [] }) {
       ...currentQuestion.options.map((opt, idx) => h('button', {
         key: idx,
         'data-aue-resource': 'urn:aemconnection:' + opt._path + '/jcr:content/data/master',
-        onClick: () => handleAnswer(),
+        onClick: () => handleAnswer(opt,idx, step),
       },
       opt.image && opt.image._dmS7Url
       && h('div', { className: 'quiz-option-img-wrapper-' + opt.imageType },
