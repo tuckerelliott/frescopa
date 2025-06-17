@@ -394,10 +394,6 @@ button.button.secondary:hover {
   color: var(--color-brand-600);
 }
 
-main input:hover {
-  border: var(--shape-border-width-1) solid var(--color-neutral-700);
-}
-
 main blockquote {
   font-style: italic;
   margin: 3rem;
