@@ -138,11 +138,12 @@ export default function Quiz({ questions = [] }) {
   }
 
   // Regular question (image or text options)
-  return h('div', { className: `quiz-inner-container step-${step}` },
+  return h('div', { 'data-aue-resource': 'urn:aemconnection:' + currentQuestion._path + '/jcr:content/data/master',  className: `quiz-inner-container step-${step}` },
     h('h2', { 'data-aue-prop': 'question', 'data-aue-label': 'question', 'data-aue-type': 'text'} , currentQuestion.question),
     h('div', { className: 'quiz-options' },
       ...currentQuestion.options.map((opt, idx) => h('button', {
         key: idx,
+        'data-aue-resource': 'urn:aemconnection:' + opt._path + '/jcr:content/data/master',
         onClick: () => handleAnswer(),
       },
       opt.image && opt.image._dmS7Url
