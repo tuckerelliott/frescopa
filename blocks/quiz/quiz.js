@@ -29,6 +29,8 @@ export default async function decorate(block) {
     console.error('Failed to fetch quiz data', e);
   }
 
+    const itemId = `urn:aemconnection:${quizpath}/jcr:content/data/master`;
+
   block.innerHTML = '';
-  render(html`<${Quiz} questions=${questions} />`, block);
+  render(html`<div data-aue-resource=${itemId} data-aue-label="quiz content fragment" data-aue-type="reference" data-aue-filter="cf"><${Quiz} questions=${questions} /></div>`, block);
 }

@@ -139,20 +139,23 @@ export default function Quiz({ questions = [] }) {
 
   // Regular question (image or text options)
   return h('div', { className: `quiz-inner-container step-${step}` },
-    h('h2', null, currentQuestion.question),
+    h('h2', { 'data-aue-prop': 'question', 'data-aue-label': 'question', 'data-aue-type': 'text'} , currentQuestion.question),
     h('div', { className: 'quiz-options' },
       ...currentQuestion.options.map((opt, idx) => h('button', {
         key: idx,
         onClick: () => handleAnswer(),
       },
       opt.image && opt.image._dmS7Url
-      && h('div', { className: 'quiz-option-img-wrapper' },
+      && h('div', { className: 'quiz-option-img-wrapper-' + opt.imageType },
         h('img', {
           src: opt.image._dmS7Url + (opt.image._dmS7Url.includes('?') ? '&' : '?') + 'wid=520',
           alt: opt.description || '',
+          'data-aue-prop': 'image',
+          'data-aue-label': 'image',
+          'data-aue-type': 'media',
         }),
       ),
-      h('span', { className: 'quiz-option-description' }, opt.description),
+      h('span', { 'data-aue-prop': 'description', 'data-aue-label': 'description', 'data-aue-type': 'text', className: 'quiz-option-description' }, opt.description),
       ),
       ),
     ),
