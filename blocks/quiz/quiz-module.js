@@ -150,6 +150,9 @@ export default function Quiz({ questions = [] }) {
         h('img', {
           src: opt.image._dmS7Url + (opt.image._dmS7Url.includes('?') ? '&' : '?') + 'wid=520',
           alt: opt.description || '',
+          'data-aue-prop': 'image',
+          'data-aue-label': 'image',
+          'data-aue-type': 'media',
         }),
       ),
       h('span', { 'data-aue-prop': 'description', 'data-aue-label': 'description', 'data-aue-type': 'text', className: 'quiz-option-description' }, opt.description),
