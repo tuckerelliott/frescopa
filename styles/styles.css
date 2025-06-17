@@ -251,7 +251,7 @@ h1 {
 }
 
 h2 {
-  font: var(--type-display-2-font);
+  font: normal normal normal 48px/52px Baskerville, serif;
   letter-spacing: var(--type-display-2-letter-spacing);
 }
 

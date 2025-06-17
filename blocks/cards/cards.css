@@ -145,11 +145,10 @@
 }
 
 .home .cards ul li {
-  margin: 16px 0;
+  margin: 0;
   background: var(--background-color);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0 0 0 / 12%);
-  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0 0 0 / 12%);
 }
 
 .home .cards-card-image {
@@ -187,6 +186,10 @@
     max-height: 360px;
   }
 }
+.card-tiles h2 {
+  margin-top: 0;
+  padding-top: 20px;
+}
 
 .card-tiles .cards ul {
   display: flex;
@@ -200,7 +203,8 @@
   margin: 16px 0;
   background: var(--background-color);
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0 0 0 / 12%);
+  box-shadow: 0 10px 20px rgba(0 0 0 / 12%);
+  padding-top: 30px;
   overflow: hidden;
 }
 
@@ -251,6 +255,7 @@ main > .section + .background .cards ul li {
   border-radius: 10px;
   opacity: 1;
   padding-top: 30px;
+  margin: 0;
 }
 
 main > .section + .background .cards-card-image {
