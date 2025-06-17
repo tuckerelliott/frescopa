@@ -30,5 +30,5 @@ export default async function decorate(block) {
   }
 
   block.innerHTML = '';
-  render(html`<${Quiz} questions=${questions} />`, block);
+  render(html`<div data-aue-resource=${quizpath} data-aue-label="offer content fragment" data-aue-type="reference" data-aue-filter="cf"><${Quiz} questions=${questions} /></div>`, block);
 }
