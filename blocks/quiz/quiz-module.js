@@ -146,7 +146,7 @@ export default function Quiz({ questions = [] }) {
         onClick: () => handleAnswer(),
       },
       opt.image && opt.image._dmS7Url
-      && h('div', { className: 'quiz-option-img-wrapper' },
+      && h('div', { className: 'quiz-option-img-wrapper-' + opt.imageType },
         h('img', {
           src: opt.image._dmS7Url + (opt.image._dmS7Url.includes('?') ? '&' : '?') + 'wid=520',
           alt: opt.description || '',
