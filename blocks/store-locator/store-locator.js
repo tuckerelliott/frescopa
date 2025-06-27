@@ -26,7 +26,7 @@ export async function initMap() {
 }
 
 export default function decorate(block) {
-  //const pText = block.querySelector('p').textContent;
+  const pText = block.querySelector('p').textContent;
   block.textContent = '';  
   window.initMap = async () => {
     initMap();
@@ -35,7 +35,7 @@ export default function decorate(block) {
   const locatorDOM = document.createRange().createContextualFragment(`
   <div class="shopfinder">
     <div class="sidepanel">
-      <h3 class="sidepanel__title">Try a new roast at a Fréscopa near you!</h3>
+      <h3 class="sidepanel__title">${pText}</h3>
     <div class="search">
       <p class="search__title">Find another location</p>
       <div class="search__box">
