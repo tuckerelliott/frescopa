@@ -165,7 +165,7 @@ function setupSubmenu(navSection) {
  */
 export default async function decorate(block) {
   // Language root detection and path adjustment
-  const supportedLocales = ['es', 'jp', 'de'];
+  const supportedLocales = ['es', 'fr', 'jp', 'de'];
   const pathParts = window.location.pathname.split('/').filter(Boolean);
   let langRoot = '';
   if (pathParts.length > 0 && supportedLocales.includes(pathParts[0])) {
