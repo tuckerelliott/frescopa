@@ -1,8 +1,11 @@
 {
   "mappings": [
+    "/content/frescopa/:/",
     "/content/frescopa/en/:/",
     "/content/frescopa/en/placeholders:/placeholders.json",
     "/content/frescopa/en/locations/locationslist:/locations.json",
+    "/content/frescopa/es:/es",
+    "/content/frescopa/es/:/es/",
     "/content/frescopa/configuration:/.helix/config.json",
     "/content/frescopa/headers:/.helix/headers.json",
     "/content/frescopa/metadata:/metadata.json",
