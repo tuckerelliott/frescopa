@@ -1,14 +1,14 @@
 {
   "mappings": [
-    "/content/frescopa/:/",
+    "/content/frescopa/en/:/",
+    "/content/frescopa/en/placeholders:/placeholders.json",
+    "/content/frescopa/en/locations/locationslist:/locations.json",
     "/content/frescopa/configuration:/.helix/config.json",
     "/content/frescopa/headers:/.helix/headers.json",
     "/content/frescopa/metadata:/metadata.json",
-    "/content/frescopa/placeholders:/placeholders.json",
     "/content/frescopa/configs:/configs.json",
     "/content/frescopa/configs-dev:/configs-dev.json",
-    "/content/frescopa/configs-stage:/configs-stage.json",
-    "/content/frescopa/locations/locationslist:/locations.json"
+    "/content/frescopa/configs-stage:/configs-stage.json"
   ],
   "includes": [
     "/content/frescopa/",
