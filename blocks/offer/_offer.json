@@ -25,6 +25,31 @@
                 "name": "offerpath",
                 "value": "",
                 "label": "Offer Content Fragment path",
+                "valueType": "string",
+                "variationName": "contentFragmentVariation",
+                "validation": {
+                    "rootPath": "/content/frescopa"
+                }
+              },
+              {
+                "component": "text-input",
+                "name": "offerTitle",
+                "value": "",
+                "label": "Offer Title",
+                "valueType": "string"
+              },
+              {
+                "component": "text-input",
+                "name": "offerDescription",
+                "value": "",
+                "label": "Offer Description",
+                "valueType": "string"
+              },
+              {
+                "component": "text-input",
+                "name": "offerImage",
+                "value": "",
+                "label": "Offer Image URL",
                 "valueType": "string"
               },
               {
