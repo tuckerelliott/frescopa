@@ -13,16 +13,22 @@ export default async function decorate(block) {
 
   index.data
     .forEach((post) => {
+      // If the post is not from Blog category, skip it
+      if (post.category != 'blog') {
+        return;
+      }
 
       const eager = false;
       const title = '';
       const li = document.createElement('li');
-      const picture = createOptimizedPicture(post.image, post.title || title, eager, [{ width: '750' }]);
+      const picture = createOptimizedPicture(post.image, post.title || title, eager, [{ width: '300' }]);
       const pictureTag = picture.outerHTML;
 
       li.innerHTML = `
       <a href="${post.path}">
-        <h4>${post.title}</h4>
+        ${pictureTag}
+        <h5>${post.title}</h5>
+        
       </a>
     `;
       container.append(li);
