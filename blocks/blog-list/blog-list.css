@@ -1,0 +1,17 @@
+.blog-list {
+
+    ul { 
+          display: flex;
+        flex-direction: row;
+        gap: 0;
+        flex-wrap: wrap;
+        text-decoration: none;
+    }
+
+    li {
+        border: 1px solid bisque;
+        width: 500px;
+        list-style: none;
+    }
+
+}
