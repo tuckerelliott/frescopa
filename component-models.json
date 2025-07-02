@@ -180,6 +180,17 @@
     ]
   },
   {
+    "id": "blogpostlist",
+    "fields": [
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
