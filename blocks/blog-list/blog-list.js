@@ -13,11 +13,10 @@ export default async function decorate(block) {
 
   index.data
     .forEach((post) => {
-
-      // If the post does not have a category, skip it
+      // If the post is not from Blog category, skip it
       if (post.category != 'blog') {
         return;
-      } 
+      }
 
       const eager = false;
       const title = '';
