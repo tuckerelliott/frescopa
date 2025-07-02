@@ -180,7 +180,7 @@
     ]
   },
   {
-    "id": "bloglist",
+    "id": "blog-list",
     "fields": [
       {
         "component": "text",
