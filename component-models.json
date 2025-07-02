@@ -183,10 +183,11 @@
     "id": "blogpostlist",
     "fields": [
       {
-        "component": "text-input",
+        "component": "text",
         "valueType": "string",
         "name": "heading",
-        "label": "Heading"
+        "label": "Heading",
+        "value": ""
       }
     ]
   },
