@@ -1,8 +1,9 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
-  const indexResponse = await fetch('/sitemap.json');
+  const indexResponse = await fetch('/../sitemap.json');
   if (!indexResponse.ok) {
+    console.error('Failed to fetch sitemap.json:', indexResponse.statusText);
     return;
   }
 
@@ -12,9 +13,7 @@ export default async function decorate(block) {
 
   index.data
     .forEach((post) => {
-      if (post.category !== 'blog') {
-        return;
-      }
+
       const eager = false;
       const title = '';
       const li = document.createElement('li');
