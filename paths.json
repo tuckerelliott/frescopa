@@ -2,6 +2,7 @@
   "mappings": [
     "/content/frescopa/:/",
     "/content/frescopa/en/:/",
+    "/content/frescopa/metadata:/metadata.json",
     "/content/frescopa/en/placeholders:/placeholders.json",
     "/content/frescopa/en/locations/locationslist:/locations.json",
     "/content/frescopa/es:/es",
