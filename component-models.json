@@ -153,6 +153,10 @@
             "value": "article"
           },
           {
+            "name": "Blog",
+            "value": "blog"
+          },
+          {
             "name": "Columns",
             "value": "columns"
           }
