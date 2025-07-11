@@ -19,6 +19,7 @@
         position: relative;
         max-width: 440px;
 
+
         h5 {
             padding: 10px 20px;
             margin: 0;
@@ -33,5 +34,6 @@
         object-fit: cover;
         border-radius: 10px 10px 0 0;
         overflow: hidden;
+
     }
 }
