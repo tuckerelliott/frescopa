@@ -11,12 +11,12 @@ export default async function decorate(block) {
   const pathParts = window.location.pathname.split('/').filter(Boolean);
   let langRoot = '';
   if (pathParts.length > 0 && supportedLocales.includes(pathParts[0])) {
-    langRoot = '/' + pathParts[0];
+    langRoot = `/${pathParts[0]}`;
   }
   const footerMeta = getMetadata('footer');
   let footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
-  if (langRoot && !footerPath.startsWith(langRoot + '/')) {
-    footerPath = langRoot + footerPath;
+  if (langRoot && !footerPath.startsWith(`${langRoot}/`)) {
+    footerPath = `${langRoot}${footerPath}`;
   }
   const fragment = await loadFragment(footerPath);
 
