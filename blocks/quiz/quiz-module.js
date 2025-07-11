@@ -15,8 +15,8 @@ export default function Quiz({ questions = [] }) {
   const totalSteps = questions.length;
 
   // Handle answer selection
-  const handleAnswer = (option, idx, step) => {
-    setAnswers(prev => [...prev, { option, idx, step }]);
+  const handleAnswer = (option, idx, thisstep) => {
+    setAnswers((prev) => [...prev, { option, idx, thisstep }]);
     setStep((prev) => prev + 1);
   };
 
@@ -33,9 +33,8 @@ export default function Quiz({ questions = [] }) {
 
   // Render result view
   if (step === totalSteps) {
-    console.log('All answers:', answers);
-
-    console.log(answers[0].idx);
+    // console.log('All answers:', answers);
+    // console.log(answers[0].idx);
 
     let coffeeProfile = { title: '', segment: '' };
     if (answers[0].idx === 0) {
