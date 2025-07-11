@@ -14,7 +14,7 @@ export default async function decorate(block) {
   index.data
     .forEach((post) => {
       // If the post is not from Blog category, skip it
-      if (post.category != 'blog') {
+      if (post.category !== 'blog') {
         return;
       }
 
