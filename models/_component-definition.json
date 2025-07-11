@@ -44,6 +44,9 @@
           "...": "../blocks/hero/_*.json#/definitions"
         },
         {
+          "...": "../blocks/offer/_*.json#/definitions"
+        },
+        {
           "...": "../blocks/store-locator/_*.json#/definitions"
         },
         {
